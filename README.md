@@ -41,4 +41,4 @@ Data kutipan diambil dari [forum Kaskus (2013 era) sebagai bahan eksperimen open
 
 ---
 
-Keseluruhan kode di repositori ini dibuat menggunakan AI / [chatgpt](https://chatgpt.com/)
+Keseluruhan kode di repositori ini dibuat menggunakan AI / [chatgpt](https://chatgpt.com/) sesuai arahan dari Mas Wapress Gibran untuk meningkatkan penggunaan AI
