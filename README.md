@@ -1,6 +1,6 @@
 # 🎲 API Random Quotes Bijak FUFUFAFA
 
-Sebuah API sederhana untuk mengambil kutipan random dari akun anonim forum kaskus bernama FUFUFAFA seorang filsuf bijak abad 21. 
+Sebuah API sederhana untuk mengambil kutipan random dari akun anonim forum kaskus bernama FUFUFAFA seorang filsuf bijak abad ke-21. 
 ---
 
 ## 🛰 Deploy ke Vercel

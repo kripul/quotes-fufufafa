@@ -1,5 +1,6 @@
 // pages/index.js
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 export default function Home() {
   const [quote, setQuote] = useState(null);
@@ -13,13 +14,22 @@ export default function Home() {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Random Quote API</h1>
+      <Head>
+        <title>Fufufafa Random Quote API</title>
+      </Head>
+      {/* <h1 style={styles.title}>Random Quote API</h1> */}
+      <p style={styles.description}>Sebuah API sederhana untuk mengambil kutipan random dari akun anonim forum kaskus bernama FUFUFAFA seorang filsuf bijak abad ke-21.
+      </p>
       <section style={styles.quoteSection}>
-        <h2>Quote Acak:</h2>
         {quote ? (
           <blockquote style={styles.quote}>
             {quote.comment}
-            <footer style={styles.quoteFooter}>— {quote.threadTitle}</footer>
+            <footer style={styles.quoteFooter}>
+              —{' '}
+              <a href={quote.url} target="_blank" rel="noopener noreferrer" style={styles.link}>
+                {quote.threadTitle}
+              </a>
+            </footer>
           </blockquote>
         ) : (
           <p>Memuat quote...</p>
@@ -33,7 +43,7 @@ export default function Home() {
         </p>
         <p>Contoh Curl:</p>
         <pre style={styles.code}>
-          {`curl https://<nama-proyek-anda>.vercel.app/api/quote`}
+          {`curl https://quotes-fufufafa.vercel.app/api/quote`}
         </pre>
         <h3>2. Filter Quote berdasarkan Keyword</h3>
         <p>
@@ -41,14 +51,14 @@ export default function Home() {
         </p>
         <p>Contoh Curl:</p>
         <pre style={styles.code}>
-          {`curl "https://<nama-proyek-anda>.vercel.app/api/quotes?keyword=musik"`}
+          {`curl "https://quotes-fufufafa.vercel.app/api/quotes?keyword=musik"`}
         </pre>
       </section>
       <footer style={styles.footer}>
         <p>
           &copy; {new Date().getFullYear()} Random Quote API.
           <br />
-          Lihat proyek di: <a href="https://github.com/username/nama-repo" target="_blank" rel="noopener noreferrer">https://github.com/username/nama-repo</a>
+          Lihat proyek di: <a href="https://github.com/kripul/quotes-fufufafa" target="_blank" rel="noopener noreferrer">Github</a>
         </p>
       </footer>
     </div>
@@ -79,6 +89,10 @@ const styles = {
   quoteFooter: {
     marginTop: '10px',
     fontWeight: 'bold'
+  },
+  link: {
+    textDecoration: 'none',
+    color: '#4a90e2'
   },
   docsSection: {
     textAlign: 'left',
