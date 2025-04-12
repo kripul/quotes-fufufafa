@@ -23,9 +23,9 @@ export default function Home() {
       <section style={styles.quoteSection}>
         {quote ? (
           <blockquote style={styles.quote}>
-            {quote.comment}
+            "{quote.comment}"
             <footer style={styles.quoteFooter}>
-              —{' '}
+              Doksli : {' '}
               <a href={quote.url} target="_blank" rel="noopener noreferrer" style={styles.link}>
                 {quote.threadTitle}
               </a>
@@ -84,11 +84,12 @@ const styles = {
   },
   quote: {
     fontStyle: 'italic',
-    fontSize: '1.2em'
+    fontSize: '1.2em',
+    fontWeight: 'bold'
   },
   quoteFooter: {
     marginTop: '10px',
-    fontWeight: 'bold'
+    fontWeight: 'normal',
   },
   link: {
     textDecoration: 'none',
